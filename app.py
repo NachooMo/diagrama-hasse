@@ -139,7 +139,7 @@ def dibujar_hasse(A):
 
 # INTERFAZ STREAMLIT
 
-st.title("📊 Diagramas de Hasse")
+st.title("Diagramas de Hasse")
 
 st.write(
     """
@@ -153,7 +153,7 @@ diagrama de Hasse.
 
 
 # BOTÓN ALEATORIO
-if st.button("🎲 Generar número aleatorio"):
+if st.button("Generar número aleatorio"):
     st.session_state.numero = random.randint(1, 1000)
 
 
@@ -168,7 +168,7 @@ numero = st.number_input(
 
 
 # BOTÓN PRINCIPAL
-if st.button("🚀 Generar Diagrama"):
+if st.button("Generar Diagrama"):
 
     st.subheader("1. Cálculo de divisores")
 
@@ -206,9 +206,11 @@ se crea un par ordenado.
 
     st.write(
         """
-Se eliminan relaciones reflexivas y transitivas
-para conservar únicamente las conexiones directas
-del diagrama de Hasse.
+El programa elimina primero las relaciones reflexivas,
+como (a,a), ya que un nodo no necesita conectarse consigo mismo,
+Luego elimina relaciones indirectas o transitivas,
+manteniendo únicamente las conexiones directas,
+como lo requiere el diagrama de Hasse.
 """
     )
 
