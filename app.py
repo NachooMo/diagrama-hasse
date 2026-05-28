@@ -109,7 +109,7 @@ def dibujar_hasse(A):
             y = nivel
             pos[nodo] = (x, y)
 
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(12, 8))
 
     nx.draw(
         G,
